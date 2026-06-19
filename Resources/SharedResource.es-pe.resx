@@ -1,0 +1,30 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="UnexpectedServerError" xml:space="preserve">
+        <value>Ocurrió un error inesperado en el servidor</value>
+    </data>
+    <data name="ResourceNotFound" xml:space="preserve">
+        <value>El recurso solicitado no fue encontrado</value>
+    </data>
+    <data name="UnauthorizedAccess" xml:space="preserve">
+        <value>No tienes permiso para realizar esta acción</value>
+    </data>
+    <data name="ValidationError" xml:space="preserve">
+        <value>La solicitud contiene valores inválidos</value>
+    </data>
+</root>
