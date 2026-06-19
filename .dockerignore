@@ -1,0 +1,16 @@
+**/.git
+**/.gitignore
+**/.vs
+**/.idea
+**/.vscode
+**/bin
+**/obj
+**/*.user
+**/*.suo
+**/Dockerfile*
+**/.dockerignore
+appsettings.Development.json
+**/_local-config
+**/node_modules
+**/*.md
+!README.md
