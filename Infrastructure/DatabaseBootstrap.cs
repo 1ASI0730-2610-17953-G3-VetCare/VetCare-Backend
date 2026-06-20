@@ -24,7 +24,7 @@ public static class DatabaseBootstrap
             Timeout = 60,
             CommandTimeout = 60,
             KeepAlive = 30,
-            SslMode = SslMode.Require,
+            SslMode = SslMode.Prefer,
             TrustServerCertificate = true
         };
 

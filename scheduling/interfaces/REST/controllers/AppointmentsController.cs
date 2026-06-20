@@ -52,4 +52,25 @@ public class AppointmentsController : ControllerBase
             return NotFound(new { message = ex.Message });
         }
     }
+
+    [HttpPatch("{id}/cancel")]
+    public async Task<IActionResult> Cancel(int id)
+    {
+        try
+        {
+            await _appointmentService.CancelAppointmentAsync(id);
+            return Ok(new { message = "Appointment cancelled successfully." });
+        }
+        catch (ArgumentException ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+    }
+
+    [HttpGet("by-date")]
+    public async Task<IActionResult> GetByDate([FromQuery] DateTime date)
+    {
+        var appointments = await _appointmentService.GetAppointmentsByDateAsync(date);
+        return Ok(appointments);
+    }
 }

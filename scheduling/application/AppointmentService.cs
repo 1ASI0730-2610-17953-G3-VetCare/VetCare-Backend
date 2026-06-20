@@ -32,8 +32,22 @@ public class AppointmentService
     {
         var appointment = await _appointmentRepository.FindByIdAsync(id);
         if (appointment == null) throw new ArgumentException("Appointment not found");
-        
+
         appointment.Confirm();
         await _appointmentRepository.UpdateAsync(appointment);
+    }
+
+    public async Task CancelAppointmentAsync(int id)
+    {
+        var appointment = await _appointmentRepository.FindByIdAsync(id);
+        if (appointment == null) throw new ArgumentException("Appointment not found");
+
+        appointment.Cancel();
+        await _appointmentRepository.UpdateAsync(appointment);
+    }
+
+    public async Task<IEnumerable<Appointment>> GetAppointmentsByDateAsync(DateTime date)
+    {
+        return await _appointmentRepository.FindByDateAsync(date);
     }
 }
